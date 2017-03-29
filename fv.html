@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+<div class="w3-container w3-yellow">
+
+  <h1><i>PharmaCity</i></h1>      
+  <p>			-The best place to explore medicines</p></div>
+<head>
+
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+<title>Form Validation</title>
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["fname"].value;
+    var y = document.forms["myForm"]["mob"].value;
+    var z = document.forms["myForm"]["add"].value;
+    var email = document.forms["myForm"]["eid"].value;
+    atpos = email.indexOf("@");
+         dotpos = email.lastIndexOf(".");
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+    }
+    if (y == null || y == "") {
+    	alert("Please enter your Mobile Number");
+    }
+     if (z == null || z == "") {
+    	alert("Please enter your Residential Address");
+    }
+    if(email == null || email == "")
+    {
+    	alert("Please enter your Email-ID");
+    }
+    else if( atpos < 1 || (dotpos - atpos < 2))
+    {
+    	alert("Please enter correct Email-ID!!");
+    }
+}
+function Validate(myform) {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+if(!Validate(myform.password.value)) {
+            alert("Passwords do not match.");
+            return false;
+}
+        }
+        return true;
+    }
+</script>
+</head>
+<body>
+<section class="loginform cf">
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+
+Name: <br><input type="text" name="fname" placeholder="name">
+<br>
+Mobile Number: <input type="text" name="mob" placeholder="mobile number">
+<br>
+Email Address: <input type="text" name="eid" placeholder="email">
+<br>
+Residential Address: <input type="text" name="add" placeholder="address">
+<br>
+Password:* <br><input type="password" id="txtPassword" required="required" placeholder="password" />
+<br>
+Confirm Password:*<input type="password" id="txtConfirmPassword"  required="required" placeholder="re-type password" />
+<br>
+
+<input type="submit" value="Register" name="submit" onclick="return validate(this)">
+</form>
+</body>
+</html>

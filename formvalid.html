@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+<div class="w3-container w3-yellow">
+
+  <h1><i>Library Management</i></h1>      
+
+ 
+</div>
+<head>
+	<title>HTML5 Login</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<head>
+<title>Form Validation</title>
+<script>
+
+
+function validateForm() {
+    var x = document.forms["myForm"]["name"].value;
+    var y = document.forms["myForm"]["password"].value;
+    var z = document.forms["myForm"]["rpassword"].value;
+   
+    var email = document.forms["myForm"]["eid"].value;
+    atpos = email.indexOf("@");
+         dotpos = email.lastIndexOf(".");
+    if (x == null || x == "") {
+        alert("please enter the name");
+    }
+    if (y == null || y == "") {
+    	alert("Please enter your password");
+    }
+     if (y.myForm.value != z.myForm.value) {
+    	alert("Type your password correctly");
+    }
+    if(email == null || email == "")
+    {
+    	alert("Please enter your Email-ID");
+    }
+    else if( atpos < 1 || (dotpos - atpos < 2))
+    {
+    	alert("Please enter correct Email-ID!!");
+    }
+}
+</script>
+</head>
+<body>
+<section class="loginform cf">
+<form name="myForm" action=# onsubmit="return validateForm(this)" method="post">
+
+<ul>
+				<li>
+					<label for="name">Name</label>
+					<input type="text" name="name" placeholder="enter your name" onblur="myFunction(this)" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" name="password" placeholder="password" required></li>
+				</li>
+			
+				<li>
+					<label for="Retype password">Retype Password</label>
+					<input type="password" name="rpassword" placeholder="Retype Password" required>
+				</li>
+				<li>
+					<label for="Address">Adress</label>
+					<input type="textarea" name="tarea" placeholder="Address" required></li><br>
+				</li>
+				<li>
+					<br><br><br><label for="Gender">Gender</label>
+					<input type="radio" name="gender" value="male" checked> Male<br>
+  					<input type="radio" name="gender" value="female"> Female<br>
+				</li>
+				<li>
+					<input type="submit" value="Register">
+				</li>
+			</ul>
+
+</form>
+</body>
+</html>

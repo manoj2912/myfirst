@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<body>
+
+<div class="w3-container w3-yellow">
+  <h1><i>PharmaCity</i></h1>      
+  <p>			-The best place to explore medicines</p>      
+</div>
+<head>
+
+<script>
+function myFunction() {
+    var x = document.getElementById("name");
+    x.value = x.value.toUpperCase();
+    x.style.background = "yellow";
+
+}
+
+function func()
+{
+    var y = document.getElementById("password");
+    y.style.background = "yellow";  
+}
+function confirmInput() {
+    Login = document.forms[0].Login.value;
+    alert("logined successfully ........now you will be redirected to the home page");
+}
+</script>
+<style>
+a 
+{
+    color: red;
+    text-decoration: none;
+}
+</style>
+
+	<title>HTML5 Login</title>
+	<link rel="stylesheet" href="normalize.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<section class="loginform cf">
+		<form name="login" method="get" accept-charset="utf-8" onsubmit="confirmInput()" action="file:///home/manoj/Desktop/project/home.html">
+			<ul>
+				<li>
+					<label for="name">Name</label>
+					<input type="text" id="name" placeholder="enter your name" onblur="myFunction()" onfocus="myFunction(this)" required>
+				</li>
+				<li>
+					<label for="password">Password</label>
+					<input type="password" id="password" placeholder="password"   onfocus="func(this)" required></li>
+				<li>
+					<input type="submit" id="Login" value="Login">
+				</li>
+				</br></br></br></br></br>
+				<a href="forgotpswd.html">Forgot password!</a>
+
+			</ul>
+		</form>
+	</section>
+</body>
+</html>
